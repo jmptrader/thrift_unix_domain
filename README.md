@@ -6,12 +6,15 @@ thrift golang unix domain socket
 reference by https://github.com/apache/thrift/tree/master/lib/go
 
 Using Thrift Unix Domain with Go
-
+================================
 go get git.apache.org/thrift.git/lib/go/thrift
 go get github.com/Wang/thrift_unix_domain
 
 Server:
+=======
+
 func main() {
+
     transportFactory := thrift.NewTFramedTransportFactory(thrift.NewTTransportFactory())
     protocolFactory := thrift.NewTBinaryProtocolFactoryDefault()
     
@@ -28,7 +31,10 @@ func main() {
 }
 
 Client:
+=======
+
 func main() {
+
     transportFactory := thrift.NewTFramedTransportFactory(thrift.NewTTransportFactory())
     protocolFactory := thrift.NewTBinaryProtocolFactoryDefault()
     transport, err := thrift_unix_domain.NewTUnixDomain("/tmp/thrift.sock")
