@@ -8,6 +8,7 @@ reference by https://github.com/apache/thrift/tree/master/lib/go
 Using Thrift Unix Domain with Go
 ================================
 go get git.apache.org/thrift.git/lib/go/thrift
+
 go get github.com/Wang/thrift_unix_domain
 
 Server:
